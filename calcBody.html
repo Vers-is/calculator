@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js.js" defer></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <title>Calculator</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="display">
+
+            </div>
+
+            <div class="box4x4">  
+
+                <div class="bC" action="clear">C</div>
+                <div class="bPorM" action="changeSign">+/-</div>
+                <div class="bPercent" action="makePercent">%</div>
+                <div class="bDiv" action="divide">/</div> <!-- C  +/-  %  / -->
+    
+                <div class="b7" value="7">7</div>
+                <div class="b8" value="8">8</div>
+                <div class="b9" value="9">9</div>
+                <div class="bMul" action="multiply">x</div> <!-- 7  8  9  x -->
+    
+    
+                <div class="b4" value="4">4</div>
+                <div class="b5" value="5">5</div>
+                <div class="b6" value="6">6</div>
+                <div class="bMinus" action="subtract">-</div> <!-- 4  5  6  - -->
+    
+    
+                <div class="b1" value="1">1</div>
+                <div class="b2" value="2">2</div>
+                <div class="b3" value="3">3</div>
+                <div class="bPlus" action="add">+</div> <!-- 1  2  3  +-->
+
+                <div class="b0" value="0">0</div>  <!-- LAST LINE  {0 , =}  -->
+                <div class="bComma" action="makeDouble">,</div>
+                <div class="bEqual" action="calculate">=</div>
+    
+            </div>
+        </div>
+       
+
+    </main>
+</body>
+</html>

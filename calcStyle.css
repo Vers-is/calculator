@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(180, 180, 180);
+    display: grid;
+    place-items: center;
+    min-height: 100vh; 
+    font-family: sans-serif;
+}
+
+main {
+    background-color: rgb(161, 161, 161);
+    width: 320px;
+    height: 450px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    padding: 15px; 
+
+    border: solid 12px rgb(101, 101, 101);
+}
+
+.container {
+    display: grid;
+    grid-template-rows:  0.4fr 1fr;
+    gap: 20px; 
+    font-size: 16px;
+}
+
+.display {
+    background-color: rgb(145, 145, 145);
+    border: solid 1.5px rgb(103, 103, 103);
+    border-radius: 20px;
+    position: relative;
+    top: 10px;
+    font-size: 20px;
+    padding: 15px 0 0 15px;
+}
+
+.box4x4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px; 
+    padding: 10px;
+}
+
+.bC, .bPorM, .bPercent, .bDiv,
+.b7, .b8, .b9, .bMul, .b4, .b5, .b6, 
+.bMinus, .b1, .b2, .b3, .bPlus, .bComma, .bEqual, .b0 {
+    border-radius: 10px;
+    border: solid 1px rgb(103, 103, 103);
+    padding: 10px;
+    background-color: rgb(107, 107, 107);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0px 2px 5px rgba(83, 86, 85, 0.324); 
+    cursor: pointer;
+}
+ 
+.bC:hover, .bPorM:hover, .bPercent:hover,
+.b7:hover, .b8:hover, .b9:hover, .b4:hover, 
+.b5:hover, .b6:hover,  .b1:hover, .b2:hover, .b3:hover, 
+.bComma:hover,.b0:hover {
+    background-color: rgb(87, 86, 86);
+    transition: background-color 0.2s ease;
+}
+
+.bPlus:hover, .bEqual:hover, .bMinus:hover,  .bDiv:hover,
+.bMul:hover,.bDiv:hover,.bC:hover{
+    background-color: rgb(80, 118, 96);
+    transition: background-color 0.2s ease;
+}
+
+
+.bC:active, .bPorM:active, .bPercent:active,
+.b7:active, .b8:active, .b9:active, .b4:active, 
+.b5:active, .b6:active,  .b1:active, .b2:active, .b3:active, 
+.bComma:active,.b0:active {
+    background-color: rgb(137, 137, 137);
+}
+
+.bPlus:active, .bEqual:active, .bMinus:active,  .bDiv:active,
+.bMul:active,.bDiv:active,.bC:active{
+    background-color: rgb(168, 197, 180);
+}
+
+
+.bPorM, .bPercent{
+    background-color: rgb(138, 138, 138);
+}
+
+.bMul, .bDiv, .bMinus, .bPlus, .bEqual, .bC{
+    background-color: rgb(105, 153, 126);
+}
+
+.b0 {
+    grid-column: span 2; 
+}
+
+::selection {
+    background-color: transparent;
+  }
+  
