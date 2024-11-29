@@ -13,7 +13,7 @@ body {
 }
 
 main {
-    background-color: rgb(161, 161, 161);
+    background-color: rgb(153, 152, 158);
     width: 320px;
     height: 450px;
     border-radius: 20px;
@@ -22,7 +22,7 @@ main {
     justify-content: space-between; 
     padding: 15px; 
 
-    border: solid 12px rgb(101, 101, 101);
+    border: solid 12px rgb(97, 97, 105);
 }
 
 .container {
@@ -33,8 +33,8 @@ main {
 }
 
 .display {
-    background-color: rgb(145, 145, 145);
-    border: solid 1.5px rgb(103, 103, 103);
+    background-color: rgb(143, 142, 150);
+    border: solid 1.5px rgb(91, 90, 94);
     border-radius: 20px;
     position: relative;
     top: 10px;
@@ -54,14 +54,14 @@ main {
 .b7, .b8, .b9, .bMul, .b4, .b5, .b6, 
 .bMinus, .b1, .b2, .b3, .bPlus, .bComma, .bEqual, .b0 {
     border-radius: 10px;
-    border: solid 1px rgb(103, 103, 103);
+    border: solid 1px rgb(79, 80, 89);
     padding: 10px;
-    background-color: rgb(107, 107, 107);
+    background-color: rgb(97, 97, 105);
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    box-shadow: 1px 2px 2px rgba(83, 86, 85, 0.447); 
+    box-shadow: 1px 2px 0.5px rgba(57, 63, 91, 0.447); 
     cursor: pointer;
 }
  
@@ -69,7 +69,7 @@ main {
 .b7:hover, .b8:hover, .b9:hover, .b4:hover, 
 .b5:hover, .b6:hover,  .b1:hover, .b2:hover, .b3:hover, 
 .bComma:hover,.b0:hover {
-    background-color: rgb(87, 86, 86);
+    background-color: rgb(70, 70, 84);
     transition: background-color 0.2s ease;
 }
 
@@ -84,7 +84,7 @@ main {
 .b7:active, .b8:active, .b9:active, .b4:active, 
 .b5:active, .b6:active,  .b1:active, .b2:active, .b3:active, 
 .bComma:active,.b0:active {
-    background-color: rgb(137, 137, 137);
+    background-color: rgb(147, 145, 174);
 }
 
 .bPlus:active, .bEqual:active, .bMinus:active,  .bDiv:active,
@@ -94,7 +94,7 @@ main {
 
 
 .bPorM, .bPercent{
-    background-color: rgb(138, 138, 138);
+    background-color: rgb(128, 128, 138);
 }
 
 .bMul, .bDiv, .bMinus, .bPlus, .bEqual, .bC{
