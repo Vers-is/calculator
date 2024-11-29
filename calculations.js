@@ -4,6 +4,7 @@ const display = document.querySelector(".display");
 let currentValue = "";     
 let previousValue = "";    
 let operator = null;     
+let expression = "";
 
 function updateDisplay(value) {
   display.textContent = value || "0";
@@ -16,7 +17,8 @@ buttons.forEach((button) => {
 
     if (value) {
       currentValue += value;
-      updateDisplay(currentValue);
+      expression += value;
+      updateDisplay(expression);
     } else if (action) {
       handleAction(action);
     }
@@ -30,16 +32,19 @@ function handleAction(action) {
       break;
     case "changeSign":
       currentValue = currentValue ? changeSign(parseFloat(currentValue)).toString() : "";
-      updateDisplay(currentValue);
+      expression = currentValue;
+      updateDisplay(expression);
       break;
     case "makePercent":
       currentValue = currentValue ? makePercent(parseFloat(currentValue)).toString() : "";
-      updateDisplay(currentValue);
+      expression = currentValue;
+      updateDisplay(expression)
       break;
     case "makeDouble":
       if (!currentValue.includes(".")) {
         currentValue += ".";
-        updateDisplay(currentValue);
+        expression = currentValue;
+        updateDisplay(expression)
       }
       break;
     case "add":
@@ -62,7 +67,9 @@ function setOperator(action) {
       previousValue = currentValue; 
     }
     currentValue = "";
+    expression += " " + OPERATIONS[action] + " ";
     operator = action;
+    updateDisplay(expression);
   }
 }
 
@@ -77,6 +84,7 @@ function calculateResult() {
       operation: OPERATIONS[operator], 
     });
 
+    expression = result.toString();
     previousValue = result.toString();
     currentValue = "";
     operator = null;
@@ -89,6 +97,7 @@ function clear() {
   currentValue = "";
   previousValue = "";
   operator = null;
+  expression="";
   updateDisplay("0");
 }
 
